@@ -123,6 +123,10 @@ class LineChart extends AbstractChart {
           return `${x},${y}`
         }
       )
+      
+      if(points && points.length == 1) {
+        points.push(points[0]);
+      }
 
       output.push(
         <Polyline
